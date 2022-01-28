@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui.HomeUserController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1200.0" styleClass="Applicationlkol" stylesheets="@../../../Css/Style.css">
+         <children>
+            <HBox layoutX="237.0" layoutY="156.0" prefHeight="30.0" prefWidth="942.0">
+               <children>
+                  <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="645.0" prefWidth="943.0" stylesheets="@../../../Css/custom.css">
+                     <children>
+                        <Label layoutX="19.0" layoutY="17.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="Home " />
+                        <Separator layoutX="3.0" layoutY="54.0" prefHeight="5.0" prefWidth="895.0" />
+                        <VBox layoutX="20.0" layoutY="150.0" prefHeight="380.0" prefWidth="904.0" spacing="50.0">
+                           <children>
+                              <HBox prefHeight="128.0" prefWidth="1164.0" spacing="16.0">
+                                 <children>
+                                    <Pane fx:id="Matchs" prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                                       <children>
+                                          <Pane prefHeight="128.0" prefWidth="92.0" style="-fx-background-color: #00C0EF;" />
+                                          <VBox layoutX="106.0" layoutY="17.0">
+                                             <children>
+                                                <JFXButton alignment="TOP_LEFT" onAction="#ConsulterVote" prefHeight="37.0" prefWidth="136.0" text="Vote">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="Stades" prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                                       <children>
+                                          <Pane prefHeight="128.0" prefWidth="92.0" style="-fx-background-color: #1ABB9C;" />
+                                          <VBox layoutX="106.0" layoutY="17.0">
+                                             <children>
+                                                <JFXButton alignment="TOP_LEFT" onAction="#ConsulterListeMatchs" prefHeight="37.0" prefWidth="155.0" text="Liste des matchs">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="Mt" prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                                       <children>
+                                          <Pane prefHeight="128.0" prefWidth="92.0" style="-fx-background-color: #F39C12;" />
+                                          <VBox layoutX="106.0" layoutY="17.0">
+                                             <children>
+                                                <JFXButton alignment="TOP_LEFT" prefHeight="37.0" prefWidth="136.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                </JFXButton>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="128.0" prefWidth="1164.0" spacing="16.0">
+                                 <children>
+                                    <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: #00C0EF; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                                       <children>
+                                          <Pane fx:id="stat" prefHeight="128.0" prefWidth="92.0" style="-fx-background-color: #009ABF;" />
+                                          <VBox layoutX="93.0" layoutY="12.0" prefHeight="105.0" prefWidth="185.0" spacing="10.0">
+                                             <children>
+                                                <VBox prefHeight="54.0" prefWidth="155.0">
+                                                   <children>
+                                                      <JFXButton alignment="TOP_LEFT" prefHeight="37.0" prefWidth="173.0" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="18.0" />
+                                                         </font>
+                                                      </JFXButton>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <ProgressBar minHeight="-Infinity" opacity="0.78" prefHeight="5.0" prefWidth="182.0" progress="0.54" styleClass="custom-progress-bar" />
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="155.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="Notif" prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: #3de4c4; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                                       <children>
+                                          <Pane prefHeight="128.0" prefWidth="92.0" style="-fx-background-color: #1ABB9C;" />
+                                          <VBox layoutX="93.0" layoutY="1.0" prefHeight="116.0" prefWidth="185.0" spacing="10.0">
+                                             <children>
+                                                <VBox prefHeight="54.0" prefWidth="155.0">
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <JFXButton alignment="TOP_LEFT" prefHeight="69.0" prefWidth="183.0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <ProgressBar minHeight="-Infinity" opacity="0.78" prefHeight="5.0" prefWidth="182.0" progress="0.54" styleClass="custom-progress-bar" />
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="185.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: #F39C12; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                                       <children>
+                                          <Pane fx:id="compte" prefHeight="128.0" prefWidth="92.0" style="-fx-background-color: #C37D0E;" />
+                                          <VBox layoutX="95.0" layoutY="1.0" prefHeight="116.0" prefWidth="183.0" spacing="10.0">
+                                             <children>
+                                                <VBox prefHeight="54.0" prefWidth="155.0">
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <JFXButton alignment="TOP_LEFT" prefHeight="69.0" prefWidth="183.0" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </JFXButton>
+                                                <ProgressBar minHeight="-Infinity" opacity="0.78" prefHeight="5.0" prefWidth="182.0" progress="0.54" styleClass="custom-progress-bar" />
+                                                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="65.0" prefWidth="185.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: white;" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Label fx:id="user" layoutX="105.0" layoutY="17.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #7387A8;" text="User" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Pane prefHeight="145.0" prefWidth="1200.0" styleClass="head-match" stylesheets="@../gui3/style.css">
+               <children>
+                  <Label layoutX="224.0" layoutY="47.0" text="Co-Takwira" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="100.0" text="Since 2021" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="deconnexion" layoutX="890.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#deconnexion" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="Se déconnecter" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <Pane layoutX="39.0" layoutY="53.0" prefHeight="131.0" prefWidth="142.0" style="-fx-background-color: #fff;">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Pane>
+                  <Button layoutX="1143.0" layoutY="23.0" mnemonicParsing="false" onAction="#exit" prefHeight="14.0" prefWidth="28.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <FontAwesomeIconView fill="#473e98" glyphName="CLOSE" size="15" text="" />
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+            <VBox layoutY="145.0" prefHeight="704.0" prefWidth="220.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="252.0" textFill="#171717">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="30.0" prefWidth="252.0" text="Tableau de board" textFill="#171717">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                  </Label>
+                  <JFXButton fx:id="BtnMatchs" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#OnClickBtnConsulterMatchs" prefHeight="43.0" prefWidth="234.0" ripplerFill="#bfadf8" text="Mes Matchs " textFill="#5b5858">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../gui3/images/projects.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnStade" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#OnClickBtnConsulterStade" prefHeight="43.0" prefWidth="234.0" ripplerFill="#bfadf8" text="Mes Stades" textFill="#5b5858">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../gui3/images/projects.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnStat" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#OnClickBtnStatMatch" prefHeight="43.0" prefWidth="234.0" ripplerFill="#bfadf8" text="Mes Statistiques" textFill="#5b5858">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../gui3/images/projects.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Button layoutX="339.0" layoutY="9.0" mnemonicParsing="false" onAction="#exit" prefHeight="14.0" prefWidth="28.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="#0598ff" glyphName="CLOSE" size="15" text="" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

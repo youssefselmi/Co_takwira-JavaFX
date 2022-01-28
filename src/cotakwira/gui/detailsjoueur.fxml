@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="696.0" style="-fx-background-radius: 4em;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui.DetailsjoueurController">
+   <children>
+      <ImageView fx:id="Image_joueur" fitHeight="199.0" fitWidth="221.0" layoutX="39.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="Nometprenom" layoutX="321.0" layoutY="50.0" prefHeight="35.0" prefWidth="127.0" text="Nom et prenom" />
+      <Label fx:id="datenaissance" layoutX="321.0" layoutY="120.0" text="Date de Naissance" />
+      <Label fx:id="numero" layoutX="327.0" layoutY="225.0" prefHeight="21.0" prefWidth="110.0" text="Numéro" />
+      <Label fx:id="position" layoutX="327.0" layoutY="191.0" prefHeight="21.0" prefWidth="96.0" text="Position" />
+      <Label fx:id="ville" layoutX="323.0" layoutY="160.0" text="Ville" />
+   </children>
+</AnchorPane>

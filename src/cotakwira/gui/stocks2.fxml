@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1050.0" styleClass="Applicationlkol" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui.Stocks2Controller">
+<children>
+   <Pane layoutX="184.0" layoutY="8.0" prefHeight="732.0" prefWidth="859.0" styleClass="pageApplication" stylesheets="Style.css">
+      <children>
+         <JFXButton fx:id="BtnAjourerRec" layoutX="508.0" layoutY="674.0" onAction="#BtnAjourerRec" prefHeight="45.0" prefWidth="193.0" styleClass="btnAjouterReclamation" stylesheets="Style.css" text="Ajouter" textFill="WHITE" />
+         <JFXTextField fx:id="tfIP" layoutX="60.0" layoutY="421.0" promptText="ID_Produit" />
+         <JFXTextField fx:id="tfNP" layoutX="242.0" layoutY="421.0" promptText="Nom_Produit" />
+         <JFXTextField fx:id="tfQ" layoutX="426.0" layoutY="421.0" promptText="Quantite" />
+         <JFXTextField fx:id="tfPU" layoutX="617.0" layoutY="421.0" promptText="Prix_Unitie" />
+         <TableView fx:id="table_stocks" layoutX="9.0" layoutY="70.0" onMouseClicked="#TableRecClicked" prefHeight="153.0" prefWidth="827.0" stylesheets="Style.css">
+            <columns>
+               <TableColumn fx:id="col_id" prefWidth="88.0" text="ID" />
+               <TableColumn fx:id="col_nom" prefWidth="187.0" text="Nom_Produit" />
+               <TableColumn fx:id="col_quantite" prefWidth="100.0" text="Quantite" />
+               <TableColumn fx:id="col_prix" minWidth="8.0" prefWidth="194.0" text="Prix_Unitie" />
+            </columns>
+         </TableView>
+         <Text fill="#005797" layoutX="314.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produit N°" wrappingWidth="192.99999573267996">
+            <font>
+               <Font size="26.0" />
+            </font>
+         </Text>
+         <JFXButton fx:id="BtnModifierRec" layoutX="333.0" layoutY="674.0" onAction="#BtnModifierRec" prefHeight="45.0" prefWidth="193.0" styleClass="btnAjouterReclamation" stylesheets="Style.css" text="Modifier" textFill="WHITE" visible="false" />
+            <Button fx:id="ajoutbtn" layoutX="306.0" layoutY="529.0" mnemonicParsing="false" onAction="#sendadd" text="Ajouter" />
+            <TextField fx:id="filterField" layoutX="35.0" layoutY="24.0" />
+            <Button fx:id="btnshop" layoutX="617.0" layoutY="7.0" mnemonicParsing="false" onAction="#shopi" prefHeight="59.0" prefWidth="193.0" style="-fx-background-radius: 30; -fx-background-color: ff5511;" text="shop" />
+            <Button layoutX="397.0" layoutY="529.0" mnemonicParsing="false" onAction="#Edit" text="Modifier" />
+            <Button fx:id="btnshopp" layoutX="482.0" layoutY="529.0" mnemonicParsing="false" onAction="#supprimerbtn" text="supprimer" />
+      </children></Pane>
+   <Pane layoutX="17.0" prefHeight="750.0" prefWidth="167.0" styleClass="sidebar">
+      <children>
+         <Label layoutX="30.0" layoutY="82.0" prefHeight="32.0" prefWidth="107.0" text="Stocks" textFill="#189fff">
+            <font>
+               <Font name="Candara" size="15.0" />
+            </font>
+         </Label>
+      </children></Pane>
+</children>
+</AnchorPane>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stckEntrainement" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui.AfficheentrainementController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="rootEntrainement" prefHeight="742.0" prefWidth="1095.0">
+         <children>
+            <Pane fx:id="PutReclamationCard" layoutX="439.0" layoutY="9.0" prefHeight="46.0" prefWidth="241.0" styleClass="CardReclamation" stylesheets="@Reclamation.css" />
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="167.0" styleClass="sidebar" stylesheets="@Reclamation.css" visible="false">
+               <children>
+                  <Label layoutX="24.0" layoutY="97.0" prefHeight="32.0" prefWidth="161.0" text="Entrainement" textFill="WHITE">
+                     <font>
+                        <Font name="Monospaced Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="goliste" layoutX="45.0" layoutY="18.0" onAction="#goliste" prefHeight="60.0" prefWidth="65.0" styleClass="btnAjouterReclamation" stylesheets="@Reclamation.css" text="&lt;--" textFill="WHITE" />
+               </children>
+            </Pane>
+            <JFXButton fx:id="btn_update1" layoutX="365.0" layoutY="388.0" onAction="#deletecoach" prefHeight="46.0" prefWidth="193.0" styleClass="btnAjouterReclamation" stylesheets="@Reclamation.css" text="Delete" textFill="WHITE" />
+            <Pane layoutX="194.0" layoutY="67.0" prefHeight="679.0" prefWidth="882.0" styleClass="pageApplication" stylesheets="@Style.css">
+               <children>
+                  <TableView fx:id="tabview" layoutX="14.0" layoutY="14.0" onMouseClicked="#setOnMouseClicked" prefHeight="258.0" prefWidth="850.0">
+                     <columns>
+                        <TableColumn fx:id="id" minWidth="0.0" prefWidth="0.0" text="id" />
+                        <TableColumn fx:id="duree" prefWidth="115.0" text="Duree" />
+                        <TableColumn fx:id="date_entrainement" minWidth="3.0" prefWidth="170.0" text="Date_entrainement" />
+                        <TableColumn fx:id="id_coach" minWidth="0.0" prefWidth="0.0" text="Id_coach" />
+                        <TableColumn fx:id="id_stade" minWidth="0.0" prefWidth="2.0" text="Id_stade" />
+                        <TableColumn fx:id="id_equipe" minWidth="0.0" prefWidth="0.0" text="Id_equipe" />
+                        <TableColumn fx:id="nom_equipe" prefWidth="105.0" text="Equipe" />
+                        <TableColumn fx:id="nom_stade" prefWidth="103.0" text="Stade" />
+                        <TableColumn fx:id="nom_coach" prefWidth="92.0" text="Coach" />
+                        <TableColumn fx:id="ajouterCol" prefWidth="86.0" text="Type" />
+                        <TableColumn fx:id="Typee" prefWidth="85.0" text="Type" />
+                        <TableColumn fx:id="heureentrainement" prefWidth="65.0" text="Heure" />
+                     </columns>
+                  </TableView>
+                  <JFXButton fx:id="btn_update11" layoutX="392.0" layoutY="608.0" onAction="#deleteentrainement" prefHeight="46.0" prefWidth="193.0" styleClass="btn" stylesheets="@Style.css" text="Delete" textFill="WHITE" />
+                  <JFXDatePicker fx:id="tftdateupdate" layoutX="117.0" layoutY="438.0" prefHeight="31.0" prefWidth="179.0" />
+                  <JFXComboBox fx:id="tftidequipeupdate" layoutX="337.0" layoutY="307.0" onAction="#retournomequipe" prefHeight="31.0" prefWidth="205.0" promptText="ID_Equipe" />
+                  <JFXComboBox fx:id="tftidstadeupdate" layoutX="69.0" layoutY="307.0" onAction="#retournomstade" prefHeight="31.0" prefWidth="179.0" promptText="ID_Stade" />
+                  <JFXComboBox fx:id="tftidcoachupdate" layoutX="621.0" layoutY="315.0" onAction="#retournomcoach" prefHeight="31.0" prefWidth="179.0" promptText="ID_Coach" />
+                  <JFXTextField fx:id="tftdureeupdate" layoutX="482.0" layoutY="514.0" prefHeight="31.0" prefWidth="205.0" text="Duree" />
+                  <JFXComboBox fx:id="tftidentrainementupdate" layoutX="271.0" layoutY="616.0" prefHeight="15.0" prefWidth="29.0" promptText="ID_Entrainement" />
+                  <JFXButton fx:id="btn_update111" layoutX="601.0" layoutY="608.0" onAction="#updateentrainement" prefHeight="46.0" prefWidth="193.0" styleClass="btn" stylesheets="@Style.css" text="Update" textFill="WHITE" />
+                  <JFXTextField fx:id="tftnomequipee" layoutX="337.0" layoutY="369.0" prefHeight="31.0" prefWidth="205.0" text="Nom_equipe" />
+                  <JFXTextField fx:id="tftnomcoache" layoutX="608.0" layoutY="376.0" prefHeight="31.0" prefWidth="205.0" text="Nom_coach" />
+                  <JFXTextField fx:id="tftnomstadee" layoutX="66.0" layoutY="353.0" prefHeight="31.0" prefWidth="205.0" text="Nom_stade" />
+                  <JFXComboBox fx:id="tfttypeupdate" layoutX="152.0" layoutY="516.0" onAction="#retournomcoach" prefHeight="31.0" prefWidth="179.0" promptText="Type" />
+                  <JFXComboBox fx:id="tftheureupdate" layoutX="475.0" layoutY="441.0" onAction="#retournomcoach" prefHeight="31.0" prefWidth="179.0" promptText="Heure" />
+                  <JFXButton fx:id="btn_update112" layoutX="184.0" layoutY="609.0" onAction="#statentrainement" prefHeight="46.0" prefWidth="193.0" styleClass="btn" stylesheets="@Style.css" text="Statistique" textFill="WHITE" />
+                  <HBox alignment="TOP_CENTER" layoutX="24.0" layoutY="595.0" prefHeight="74.0" prefWidth="90.0">
+                     <children>
+                        <JFXButton fx:id="btnNewEntrainement" onMouseClicked="#showDialogAddEntrainement" prefHeight="86.0" prefWidth="79.0" styleClass="fezza" stylesheets="@Style.css">
+                           <graphic>
+                              <MaterialDesignIconView fill="WHITE" glyphName="PLUS" size="60" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <AnchorPane fx:id="containerAddEntrainement" layoutX="181.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="750.0" visible="false">
+               <children>
+                  <HBox alignment="CENTER" layoutX="-1.0" layoutY="14.0" prefHeight="45.0" prefWidth="750.0">
+                     <children>
+                        <Text fx:id="textRec" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h2" text="Ajouter un entrainement">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <JFXButton fx:id="btnSaveEntrainement" layoutX="527.0" layoutY="491.0" onMouseClicked="#newEntrainement" prefHeight="31.0" prefWidth="131.0" stylesheets="@Style.css" text="Enregistrer" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="action-button" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton fx:id="btnCancelAddEntrainement" layoutX="124.0" layoutY="491.0" onMouseClicked="#closeDialogAddEntrainement" prefHeight="31.0" prefWidth="131.0" styleClass="btn" stylesheets="@Style.css" text="Annuler">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton contentDisplay="CENTER" layoutX="710.0" layoutY="6.0" onMouseClicked="#closeDialogAddentrainement" prefHeight="28.0" prefWidth="20.0" styleClass="button-close" text=" ">
+                     <graphic>
+                        <MaterialDesignIconView fill="#989cab" glyphName="CLOSE" size="20" />
+                     </graphic>
+                  </JFXButton>
+                 
+                  <JFXComboBox fx:id="tftgrade" layoutX="445.0" layoutY="410.0" prefWidth="107.0" visible="false" />
+                  <JFXTextField fx:id="tftid" layoutX="15.0" layoutY="58.0" text="1" />
+                  <JFXDatePicker fx:id="tftdate" layoutX="507.0" layoutY="62.0" prefHeight="31.0" prefWidth="169.0" />
+                  <JFXTextField fx:id="tftduree" layoutX="198.0" layoutY="62.0" prefHeight="31.0" prefWidth="138.0" text="Duree" />
+                  <JFXComboBox fx:id="tftheure" layoutX="361.0" layoutY="62.0" prefHeight="31.0" prefWidth="90.0" promptText="Heure" />
+                  <TableView fx:id="tabviewstade" layoutX="8.0" layoutY="281.0" onMouseClicked="#setOnMouseClicked1" prefHeight="160.0" prefWidth="232.0" stylesheets="@Style.css">
+         <columns>
+            <TableColumn fx:id="idStade" minWidth="0.0" prefWidth="0.0" text="id" />
+            <TableColumn fx:id="nom_stadee" prefWidth="230.0" text="Nom Stade" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tabviewstade1" layoutX="539.0" layoutY="277.0" onMouseClicked="#setOnMouseClickedequipe" prefHeight="160.0" prefWidth="154.0" stylesheets="@Style.css">
+         <columns>
+            <TableColumn fx:id="id1" minWidth="0.0" prefWidth="0.0" text="id" />
+            <TableColumn fx:id="nom_coach1" prefWidth="165.0" text="Equipe" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tabviewcoach" layoutX="269.0" layoutY="281.0" onMouseClicked="#setOnMouseClickedCoach" prefHeight="151.0" prefWidth="232.0" stylesheets="@Style.css">
+         <columns>
+            <TableColumn fx:id="idcoach" minWidth="0.0" prefWidth="0.0" text="id" />
+            <TableColumn fx:id="nom_coach2" prefWidth="115.0" text="Nom" />
+            <TableColumn fx:id="prenom_coach2" prefWidth="87.0" text="prenom_coach" />
+         </columns>
+      </TableView>
+                  <JFXComboBox fx:id="tftidequipe" layoutX="220.0" layoutY="122.0" prefHeight="31.0" prefWidth="205.0" promptText="ID_Equipe" />
+                  <JFXComboBox fx:id="tftidstade" layoutX="15.0" layoutY="122.0" prefHeight="31.0" prefWidth="193.0" promptText="ID_Stade" />
+                  <JFXComboBox fx:id="tftidcoach" layoutX="437.0" layoutY="122.0" prefHeight="31.0" prefWidth="179.0" promptText="ID_Coach" />
+                  <JFXTextField fx:id="txtfield_nom_coach" layoutX="456.0" layoutY="181.0" prefHeight="31.0" prefWidth="193.0" />
+                  <JFXTextField fx:id="txtfield_nom_equipe" layoutX="220.0" layoutY="181.0" prefHeight="31.0" prefWidth="205.0" />
+                  <JFXTextField fx:id="txtfield_nom_stade" layoutX="3.0" layoutY="181.0" prefHeight="31.0" prefWidth="193.0" />
+                  <JFXComboBox fx:id="tfttype" layoutX="295.0" layoutY="226.0" prefHeight="31.0" prefWidth="179.0" promptText="Type" />
+               </children>
+            </AnchorPane>
+            <Text fill="WHITE" layoutX="436.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="     Entrainement List" wrappingWidth="277.28759765625">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+            <Pane fx:id="Navicons" layoutX="10.0" layoutY="118.0" prefHeight="557.0" prefWidth="55.0" styleClass="iconbar" stylesheets="@Style.css">
+               <children>
+                  <JFXButton fx:id="NavReclamation" layoutX="1.0" layoutY="445.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavReclamation" prefHeight="45.0" prefWidth="53.0" text="Reclam">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/reclam.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="NavRate" layoutX="1.0" layoutY="394.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavRate" prefHeight="45.0" prefWidth="53.0" text="Rating">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/rating.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="NavCoach" layoutX="1.0" layoutY="342.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavCoach" prefHeight="45.0" prefWidth="53.0" text="Coach">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/coach.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="NavEntrainemet" layoutX="1.0" layoutY="286.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavEntrainemet" prefHeight="45.0" prefWidth="55.0" text="Entrainement">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/media/entrainement.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="NavEquipe" layoutX="2.0" layoutY="232.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavEquipe" prefHeight="45.0" prefWidth="55.0" text="Equipe">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/media/fooball.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="NavArticle" layoutY="73.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavArticle" prefHeight="45.0" prefWidth="55.0" text="Article">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/news.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="NavShop" layoutY="498.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavShop" prefHeight="45.0" prefWidth="55.0" text="Shop">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/media/shop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="NavStade" layoutX="-1.0" layoutY="133.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavStade" prefHeight="45.0" prefWidth="55.0" text="Stade">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/media/stade.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="NavMatch" layoutX="-1.0" layoutY="188.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavMatch" prefHeight="45.0" prefWidth="55.0" text="Match">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/media/match.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="NavHome" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavHome" prefHeight="45.0" prefWidth="55.0" text="Home">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ContainerDeleteEntrainement" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="395.0" visible="false">
+         <children>
+            <VBox fillWidth="false" layoutX="-3.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="402.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" text="Êtes-vous sûr de supprimer définitivement ce entrainement?" textAlignment="CENTER" wrappingWidth="405.6171875" />
+                  <Text fill="#bebec2" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h5" text="Les informations ne peuvent pas être récupérées" textAlignment="CENTER" wrappingWidth="394.35414123535156" />
+                  <ImageView fitHeight="140.0" fitWidth="279.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/delete.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="75.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <JFXButton layoutX="46.0" layoutY="317.0" onMouseClicked="#hideDialogDeleteentrainement" prefHeight="31.0" prefWidth="131.0" stylesheets="@Style.css" text="Cancel">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="235.0" layoutY="317.0" onMouseClicked="#deleteEntrainement" prefHeight="31.0" prefWidth="131.0" styleClass="btn" stylesheets="@Style.css" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton contentDisplay="CENTER" layoutX="338.0" layoutY="6.0" onMouseClicked="#hideDialogDeleteEntrainement" prefHeight="28.0" prefWidth="20.0" styleClass="button-close" text=" ">
+               <graphic>
+                  <MaterialDesignIconView fill="#989cab" glyphName="CLOSE" size="20" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

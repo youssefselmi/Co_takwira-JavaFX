@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Fleftex';
+    src: url('fonts/Fleftex_M.ttf');
+}
+
+.label {
+    -fx-font-family: 'Fleftex';
+    -fx-font-size: 20;
+}
+
+.button .text {
+    -fx-font-family: 'Fleftex';
+}

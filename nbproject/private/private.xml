@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/cotakwira/gui/AjouterReclamationController.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>88</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/gui/HomeJoueur.fxml</file>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/services/CrudRate.java</file>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/gui/HomeController.java</file>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/gui/AttaqueController.java</file>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/gui/HomeRateController.java</file>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/services/mail.java</file>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/gui3/AfficherLStadeController.java</file>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/gui/HomeReclamationController.java</file>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/gui/HomeEquipe.fxml</file>
+            <file>file:/F:/Pidev%20Desktop%20Java/CoTakwira/src/cotakwira/services/CrudReclamation.java</file>
+        </group>
+    </open-files>
+</project-private>

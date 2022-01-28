@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui3.AfficherMatchLTController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="850.0" prefWidth="1200.0" styleClass="Applicationlkol" stylesheets="@../../Css/Style.css">
+         <children>
+            <Pane prefHeight="145.0" prefWidth="1200.0" styleClass="head-match" stylesheets="@style.css">
+               <children>
+                  <Label layoutX="224.0" layoutY="47.0" text="Co-Takwira" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="100.0" text="Since 2021" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="890.0" layoutY="95.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#deconnexion" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #473E98;" text="Se déconnecter" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <Pane layoutX="39.0" layoutY="53.0" prefHeight="131.0" prefWidth="142.0" style="-fx-background-color: #fff;">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </Pane>
+               </children>
+            </Pane>
+            <VBox layoutY="145.0" prefHeight="704.0" prefWidth="220.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="252.0" text="Tableau de board" textFill="#171717">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="40.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXButton fx:id="BtnMatchs" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#OnClickBtnConsulterMatchs" prefHeight="43.0" prefWidth="234.0" ripplerFill="#bfadf8" text="Mes Matchs " textFill="#5b5858">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/projects.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnStade" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#OnClickBtnConsulterStade" prefHeight="43.0" prefWidth="234.0" ripplerFill="#bfadf8" text="Mes Stades" textFill="#5b5858">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/projects.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnStat" alignment="BASELINE_LEFT" graphicTextGap="10.0" onAction="#OnClickBtnStatMatch" prefHeight="43.0" prefWidth="234.0" ripplerFill="#bfadf8" text="Mes Statistiques" textFill="#5b5858">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView accessibleText="Project List" fitHeight="16.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/projects.png" />
+                           </image>
+                           <effect>
+                              <Lighting>
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Button layoutX="1153.0" layoutY="33.0" mnemonicParsing="false" onAction="#exit" prefHeight="14.0" prefWidth="28.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="#473e98" glyphName="CLOSE" size="15" text="" />
+               </graphic>
+            </Button>
+            <JFXButton layoutX="237.0" layoutY="157.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#back" prefHeight="46.0" prefWidth="43.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-double-left.gif" />
+                     </image>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ScrollPane layoutX="243.0" layoutY="223.0" prefHeight="549.0" prefWidth="935.0">
+               <content>
+                  <TableView fx:id="MatchTable" prefHeight="548.0" prefWidth="935.0" stylesheets="@../../Css/newCascadeStyleSheet.css">
+                     <columns>
+                        <TableColumn fx:id="Col_IDM" prefWidth="89.00003051757812" text="ID Match" />
+                        <TableColumn fx:id="Col_IDE1" prefWidth="100.0" text="ID Equipe 1" />
+                        <TableColumn fx:id="Col_IDE2" prefWidth="100.0" text="ID Equipe 2" />
+                        <TableColumn fx:id="Col_IDS" prefWidth="96.0" text="ID Stade" />
+                        <TableColumn fx:id="Col_Date" prefWidth="100.0" text="Date Match" />
+                        <TableColumn fx:id="Col_desc" prefWidth="105.0" text="Description" />
+                        <TableColumn fx:id="col_st" prefWidth="93.0" text="Status" />
+                        <TableColumn fx:id="col_user" prefWidth="82.0" text="ID Org" />
+                        <TableColumn fx:id="infos" prefWidth="98.0" text="Infos" />
+                        <TableColumn fx:id="Col_alert" prefWidth="75.0" />
+                     </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

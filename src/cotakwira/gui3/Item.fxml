@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="446.0" prefWidth="949.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui3.ItemController">
+   <children>
+      <Pane fx:id="InvPane" layoutX="29.0" layoutY="18.0" prefHeight="382.0" prefWidth="902.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="76.0" layoutX="41.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_500px_64px.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="41.0" layoutY="94.0" prefHeight="0.0" prefWidth="763.0" />
+            <Label layoutX="123.0" layoutY="18.0" text="Match Terminé" textFill="#3a1c9d">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="113.0" text="Equipe 1" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label layoutX="51.0" layoutY="186.0" text="Stade" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label layoutX="279.0" layoutY="113.0" text="Equipe 2" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label layoutX="279.0" layoutY="186.0" text="Spectateur" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label fx:id="nomEq1" layoutX="58.0" layoutY="139.0" text="Nom équipe 1" textFill="#4d4c4c">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomEq2" layoutX="287.0" layoutY="139.0" text="Nom équipe 2" textFill="#4d4c4c">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="spect" layoutX="287.0" layoutY="211.0" text="Nombre de spectateur" textFill="#4d4c4c">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="stade" layoutX="58.0" layoutY="211.0" text="Nom du stade" textFill="#4d4c4c">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="628.0" layoutY="106.0" text="Heure début du match :" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label fx:id="Hdeb" layoutX="804.0" layoutY="107.0" prefHeight="19.0" prefWidth="85.0" style="-fx-background-color: #aeacac;" text="hh:mm:ss" textFill="#fffefe">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Pane layoutY="269.0" prefHeight="117.0" prefWidth="902.0" style="-fx-background-color: #F0F0F0;">
+               <children>
+                  <GridPane layoutX="-1.0" layoutY="1.0" prefHeight="117.0" prefWidth="909.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="372.0" minWidth="10.0" prefWidth="356.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="571.0" minWidth="10.0" prefWidth="553.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="desc" prefHeight="20.0" prefWidth="283.0" text="Description du match" textFill="#504df2" GridPane.halignment="CENTER">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="194.0" text="Description du match" textFill="#3a1c9d" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <GridPane GridPane.columnIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="491.0" minWidth="10.0" prefWidth="475.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="78.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Merci de voter pour ce match" textFill="#3a1c9d" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <effect>
+                                    <Glow />
+                                 </effect>
+                              </Label>
+                              <ProgressIndicator fx:id="piQuantity" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="70.0" prefWidth="55.0" progress="0.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </ProgressIndicator>
+                              <ProgressBar fx:id="pbQuantity" prefHeight="23.0" prefWidth="281.0" progress="0.0" GridPane.halignment="CENTER">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </ProgressBar>
+                              <JFXButton fx:id="btnMinus" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleBtnMinus" prefHeight="63.0" prefWidth="60.0" text=" ">
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                                 <graphic>
+                                    <ImageView fitHeight="53.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/icons8-soccer-ball-80.png" />
+                                       </image>
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="handleBtnPlus1" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#handleBtnPlus" prefHeight="63.0" prefWidth="60.0" text=" " GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                                 <graphic>
+                                    <ImageView fitHeight="53.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/icons8-football-2-80.png" />
+                                       </image>
+                                       <effect>
+                                          <Lighting>
+                                             <bumpInput>
+                                                <Shadow />
+                                             </bumpInput>
+                                             <light>
+                                                <Light.Distant />
+                                             </light>
+                                          </Lighting>
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <effect>
+                                    <Lighting>
+                                       <bumpInput>
+                                          <Shadow />
+                                       </bumpInput>
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </effect>
+                              </JFXButton>
+                              <JFXButton fx:id="btnVote" maxHeight="-Infinity" onAction="#ValiderVote" prefHeight="17.0" prefWidth="55.0" style="-fx-background-color: #02aab0;" text="voter" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Label layoutX="582.0" layoutY="23.0" text="Date d'aujourd'hui " textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label fx:id="labjj" layoutX="614.0" layoutY="34.0" text="16" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <Label fx:id="labmj" layoutX="663.0" layoutY="42.0" text="APR" textFill="#3a1c9d" />
+            <Label fx:id="labaj" layoutX="663.0" layoutY="60.0" text="2018" textFill="#aeacac" />
+            <Separator layoutX="708.0" layoutY="19.0" orientation="VERTICAL" prefHeight="64.0" prefWidth="0.0" />
+            <Label fx:id="labJ" layoutX="725.0" layoutY="33.0" text="25" textFill="#aeacac">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <Label fx:id="labM" layoutX="774.0" layoutY="41.0" text="AUG" textFill="#3a1c9d" />
+            <Label fx:id="labA" layoutX="774.0" layoutY="59.0" text="2018" textFill="#aeacac" />
+            <Label layoutX="123.0" layoutY="51.0" text="Ref: 20178" textFill="#b2b0b0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="629.0" layoutY="141.0" text="Heure fin du match :" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label fx:id="Hfin" layoutX="804.0" layoutY="139.0" prefHeight="19.0" prefWidth="85.0" style="-fx-background-color: #aeacac;" text="hh:mm:ss" textFill="#fffefe">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="728.0" layoutY="22.0" text="Date du match" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <JFXButton fx:id="actualiser" layoutX="841.0" layoutY="32.0" onAction="#ActualiserInformations" prefHeight="40.0" prefWidth="41.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/icons8-soccer-ball.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="632.0" layoutY="181.0" text="Score :" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <GridPane layoutX="722.0" layoutY="182.0" prefHeight="25.0" prefWidth="165.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="score1" text="16" textAlignment="CENTER" textFill="#aeacac" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Label>
+                  <Label fx:id="labjj2" text="-" textFill="#aeacac" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Label>
+                  <Label fx:id="score2" text="16" textFill="#aeacac" GridPane.columnIndex="2" GridPane.halignment="LEFT">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label layoutX="635.0" layoutY="230.0" text="Vote :" textFill="#3a1c9d">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <GridPane layoutX="737.0" layoutY="228.0" prefHeight="25.0" prefWidth="165.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="vote" text="0" textAlignment="CENTER" textFill="#aeacac" GridPane.halignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+         <effect>
+            <DropShadow color="#d7d2d2" height="50.0" radius="24.5" width="50.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

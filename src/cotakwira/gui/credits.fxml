@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="485.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui.Controller4">
+   <children>
+      <ImageView fitHeight="359.0" fitWidth="550.0" layoutX="-36.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../photos/card.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="20.0" layoutY="262.0" prefHeight="25.0" prefWidth="153.0" promptText="Name" />
+      <TextField layoutX="375.0" layoutY="220.0" prefHeight="25.0" prefWidth="54.0" promptText="CVC" />
+      <TextField fx:id="kol" layoutX="36.0" layoutY="162.0" onKeyReleased="#zzz" prefHeight="34.0" prefWidth="393.0" promptText="Number" />
+      <TextField layoutX="199.0" layoutY="220.0" prefHeight="25.0" prefWidth="93.0" promptText="date" />
+      <CheckBox layoutX="193.0" layoutY="266.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="260.0" text="I have read and accept the terms" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font></CheckBox>
+      <Button layoutX="409.0" layoutY="262.0" mnemonicParsing="false" onAction="#Pay" prefHeight="25.0" prefWidth="54.0" text="Valide">
+         <font>
+            <Font size="13.0" />
+         </font></Button>
+      <ProgressBar layoutX="416.0" layoutY="274.0" prefHeight="18.0" prefWidth="54.0" progress="0.37" visible="false" />
+      <ImageView fx:id="oklk" fitHeight="88.0" fitWidth="142.0" layoutX="314.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

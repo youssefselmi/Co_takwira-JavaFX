@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="707.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui.StatistiquecoachController">
+   <children>
+      <BarChart fx:id="SalaryChart" layoutX="180.0" layoutY="52.0" prefHeight="618.0" prefWidth="756.0" title="Salaire">
+        <xAxis>
+          <CategoryAxis label="Nom" prefHeight="41.0" prefWidth="797.0" tickLabelRotation="162.9" fx:id="x">
+               <cursor>
+                  <Cursor fx:constant="CROSSHAIR" />
+               </cursor>
+            </CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="salaire" nodeOrientation="LEFT_TO_RIGHT" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Pane layoutX="16.0" layoutY="22.0" prefHeight="750.0" prefWidth="167.0" styleClass="sidebar" stylesheets="@Style.css">
+         <children>
+            <JFXButton fx:id="golisteee" layoutX="43.0" layoutY="38.0" onAction="#goaffiche" prefHeight="74.0" prefWidth="82.0" styleClass="btn" stylesheets="@Style.css" text="Retour" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui.AddCommentaireController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="7.0" layoutY="3.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <JFXTextArea fx:id="ta_contenu" layoutX="107.0" layoutY="161.0" prefHeight="127.0" prefWidth="339.0" promptText="Contenu" />
+            <JFXButton fx:id="btn_ajouterC" layoutX="373.0" layoutY="301.0" onAction="#ajouterCommentaire" prefHeight="45.0" prefWidth="193.0" styleClass="btn" stylesheets="@Style.css" text="Ajouter" textFill="WHITE" />
+            <Text fill="#005797" layoutX="124.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Commenatire" wrappingWidth="229.00000321865082">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="tfId" editable="false" layoutX="98.0" layoutY="99.0" />
+            <JFXButton layoutX="14.0" layoutY="12.0" onAction="#retourCommentaire" styleClass="btn" stylesheets="@Style.css" text="Retour" />
+            <ImageView fitHeight="188.0" fitWidth="178.0" layoutX="428.0">
+               <image>
+                  <Image url="@../../images/comment.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

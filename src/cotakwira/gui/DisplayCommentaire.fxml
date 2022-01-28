@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="stckHome" prefHeight="750.0" prefWidth="1050.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cotakwira.gui.DisplayCommentaireController">
+   <children>
+      <Pane fx:id="PaneRec" layoutX="55.0" layoutY="18.0" prefHeight="732.0" prefWidth="998.0" styleClass="pageApplication" stylesheets="@Style.css">
+         <children>
+            <ImageView fitHeight="124.0" fitWidth="135.0" layoutX="739.0" layoutY="4.0">
+               <image>
+                  <Image url="@../../images/comment.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Text fill="#005797" layoutX="255.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMMENTAIRE" wrappingWidth="208.00000321865082">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableCommentaire" layoutX="179.0" layoutY="260.0" onMouseClicked="#TableRecClicked" prefHeight="214.0" prefWidth="656.0" stylesheets="@Style.css">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="27.0" text="ID" />
+            <TableColumn fx:id="contenu" prefWidth="332.0" text="Contenu" />
+            <TableColumn fx:id="date" minWidth="8.0" prefWidth="92.0" text="Date" />
+            <TableColumn fx:id="id_article" minWidth="0.0" prefWidth="92.0" text="ID Article" />
+            <TableColumn fx:id="id_joueur" prefWidth="109.0" text="ID Personnel" />
+         </columns>
+      </TableView>
+      <Label layoutX="197.0" layoutY="84.0" text="ID" />
+      <Label layoutX="170.0" layoutY="119.0" text="Type" />
+      <Label layoutX="173.0" layoutY="163.0" text="Titre" />
+      <Label layoutX="549.0" layoutY="85.0" text="Description" />
+      <Label layoutX="166.0" layoutY="220.0" text="Date" />
+      <Label layoutX="433.0" layoutY="233.0" prefHeight="21.0" prefWidth="106.0" text="ID personnel" />
+      <JFXTextField fx:id="tfId" editable="false" layoutX="215.0" layoutY="80.0" />
+      <JFXTextField fx:id="tfType" editable="false" layoutX="215.0" layoutY="115.0" />
+      <JFXTextField fx:id="tfTitre" editable="false" layoutX="215.0" layoutY="159.0" />
+      <JFXTextArea fx:id="taDescription" editable="false" layoutX="444.0" layoutY="111.0" prefHeight="104.0" prefWidth="286.0" />
+      <JFXTextField fx:id="tfDate" editable="false" layoutX="215.0" layoutY="216.0" />
+      <JFXTextField fx:id="tfIdp" editable="false" layoutX="550.0" layoutY="229.0" />
+      <JFXButton layoutX="189.0" layoutY="487.0" onAction="#actualiserCommentaire" styleClass="btn" stylesheets="@Style.css" text="Actualiser" />
+      <JFXButton layoutX="283.0" layoutY="487.0" onAction="#ajouterCommentaire" styleClass="btn" stylesheets="@Style.css" text="Ajouter" />
+      <JFXTextArea fx:id="taContenuM" layoutX="237.0" layoutY="562.0" prefHeight="90.0" prefWidth="271.0" promptText="Description" />
+      <JFXButton layoutX="372.0" layoutY="487.0" onAction="#modifier" styleClass="btn" stylesheets="@Style.css" text="Modifier" />
+      <JFXButton fx:id="BtnModifierC" layoutX="562.0" layoutY="584.0" onAction="#modifierCommentaire" prefHeight="45.0" prefWidth="193.0" styleClass="btn" stylesheets="@Style.css" text="Modifier" textFill="WHITE" />
+      <JFXButton layoutX="460.0" layoutY="487.0" onAction="#supprimerCommentaire" styleClass="btn" stylesheets="@Style.css" text="Supprimer" />
+      <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" layoutX="865.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton layoutX="183.0" layoutY="20.0" onAction="#retour" styleClass="btn" stylesheets="@Style.css" text="Retour" />
+      <Pane fx:id="Navicons" layoutY="115.0" prefHeight="557.0" prefWidth="55.0" styleClass="iconbar" stylesheets="@Style.css">
+         <children>
+            <JFXButton fx:id="NavReclamation" layoutX="1.0" layoutY="445.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavReclamation" prefHeight="45.0" prefWidth="53.0" text="Reclam">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/reclam.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="NavRate" layoutX="1.0" layoutY="394.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavRate" prefHeight="45.0" prefWidth="53.0" text="Rating">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/rating.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="NavCoach" layoutX="1.0" layoutY="342.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavCoach" prefHeight="45.0" prefWidth="53.0" text="Coach">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/coach.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="NavEntrainemet" layoutX="1.0" layoutY="286.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavEntrainemet" prefHeight="45.0" prefWidth="55.0" text="Entrainement">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/media/entrainement.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="NavEquipe" layoutX="2.0" layoutY="232.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavEquipe" prefHeight="45.0" prefWidth="55.0" text="Equipe">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/media/fooball.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="NavArticle" layoutY="73.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavArticle" prefHeight="45.0" prefWidth="55.0" text="Article">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/news.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="NavShop" layoutY="498.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavShop" prefHeight="45.0" prefWidth="55.0" text="Shop">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/media/shop.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="NavStade" layoutX="-1.0" layoutY="133.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavStade" prefHeight="45.0" prefWidth="55.0" text="Stade">
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/media/stade.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="NavMatch" layoutX="-1.0" layoutY="188.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavMatch" prefHeight="45.0" prefWidth="55.0" text="Match">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/media/match.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="NavHome" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#NavHome" prefHeight="45.0" prefWidth="55.0" text="Home">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/3éme/2émesemestre/Pi/Desktop/CoTakwira/src/resources/media/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXButton layoutX="998.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#close_app" prefHeight="30.0" prefWidth="40.0" text="Exit">
+         <graphic>
+            <MaterialDesignIconView glyphName="CLOSE" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="963.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#minimize_app" prefHeight="30.0" prefWidth="40.0" text="Minimize">
+         <graphic>
+            <MaterialDesignIconView glyphName="WINDOW_MINIMIZE" size="25" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
